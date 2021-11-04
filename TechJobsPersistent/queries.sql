@@ -11,8 +11,7 @@ SELECT Name FROM Employers WHERE Location = "St. Louis City";
 
 --Part 3
 
-SELECT * FROM skills
-      LEFT JOIN JobSkills ON Skills.Id = JobSkills.SkillId
+      SELECT distinct name, description FROM tech_jobs.skills 
+      LEFT JOIN tech_jobs.jobskills ON Skills.Id = JobSkills.SkillId
       WHERE JobSkills.JobId IS NOT NULL
       ORDER BY name ASC;
-
